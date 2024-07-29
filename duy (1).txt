@@ -30,7 +30,7 @@ return v2
 end
 ---------------
 
-  local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard'))()   
+  local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/zeroscgaming/lib-zpshub/83ada98fa83bc5eab7a2422ff31b72c43e73db91/Maru%20hub%20lib'))()   
    local win = DiscordLib:Window("[Khánh Ngọc] ".." ")   
 local per = game:GetService("Players").LocalPlayer.Name
  DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok") 
