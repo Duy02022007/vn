@@ -1,5 +1,5 @@
 local ki = game:GetService("Players").LocalPlayer
-if ki.Name == "ThuAn2010" or ki.Name == "khanhmochi2009"
+if ki.Name == "Paayft2" or ki.Name == "khanhmochi2009"
 then
 ki:Kick("Please Try Again")
 else
