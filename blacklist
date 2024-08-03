@@ -19,7 +19,7 @@ local function isCurrentPlayerBanned()
 end
 if isCurrentPlayerBanned() then
    local HttpService = game:GetService("HttpService")
-Webhook_URL =  "https://discord.com/api/webhooks/1268952672447238155/qOryTGEoEl1G_UrQ1H2ZAMwObBgkMgm4kCCPUesT2CxhXrRQG82l6SmgHx1bCmeSoh2Y"
+Webhook_URL =  "https://discord.com/api/webhooks/1269190578382442568/hch7wx8WtOLz5PRTa7JcCPIOiTozSsRJ05E84G2S6Qwr0USGmOBbCzZqMaEIy7D00YCL"
 local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 httprequest(
 {
