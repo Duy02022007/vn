@@ -48,7 +48,7 @@ httprequest(
  }} 
  }) 
  })
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DuyM7/Function-FindFirstChild-Plr/main/blacklist"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Duy02022007/vn/main/blacklist"))()
 if test then
 test:Destroy()
 else
