@@ -1,4 +1,4 @@
-local Notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Hoclomcongthuc/main/noitification%20"))()
+local Notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Duy02022007/vn/main/nguu"))()
 function df()
 local args = {
     [1] = value
@@ -30,7 +30,7 @@ return v2
 end
 ---------------
 
-  local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/New'))()   
+  local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/Duy02022007/Discord-Lib/main/Discord-Lib'))()   
    local win = DiscordLib:Window("[Khánh Ngọc] ".." ")   
 local per = game:GetService("Players").LocalPlayer.Name
  DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok") 
@@ -1642,127 +1642,7 @@ if httprequest then
 end
 		end
 end)
- btns:Label("More") 
- btns:Button("Universal, Test Hub", function() 
- loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/TestHub/main/Universal"))() 
- end) 
-  btns:Button("Lucky Block Battleground", function()   
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/LuckyBlockBattleground/main/HttVeg'))()   
-   end)  
-  btns:Button("Sakura Stand", function()  
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Sakura-Stand/main/ST'))()   
-  end)  
-  btns:Button("AUT OLD UNIVERSE", function()  
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/OUT-OLD-UNIVERSE/main/UNIVERSE%20OLD" ,true))()  
-  end)  
- btns:Label("Script VNP") 
-    btns:Button("Hoho Hub VNP", function()     
-     loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/SCRIPTS/vn%20Piece%20script-obfuscated.lua', true))()     
-     end)    
-btns:Button("Viet Hub VNP", function() 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/viet452009/VietHub/main/Loading.Lua"))()
-end)
-
-btns:Label("More Script") 
-btns:Button("Hub ESP",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/ESP-COPY/main/TY%20FOR%20METHOD"))()
-end)
- btns:Button("Infinte yield", function() 
- loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))() 
- end) 
-
-   btns:Button("Anti Afk", function()    
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Anti-AFK/main/NO%20KICK" ,true))()    
-    end)    
-    btns:Button("Keyboard", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()       
-   end)             
-    btns:Button("FlyV3", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()   
-   end)    
-    btns:Button("Shift Lock", function()         loadstring(game:HttpGet("https://raw.githubusercontent.com/MiniNoobie/ShiftLockx/main/Shiftlock-MiniNoobie",true))()    
-    end)
-local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
-local ones = 0.000000001
-local Gon = 0.00000000001
-local Ang = 0.0000000001
-local cop = 0.0000000000001
-local count = 0
-local drops = serv:Channel("Event 🌟 0 Luck☘️")
-drops:Button("CopyLinkFb Người Phát Quà",function()
-setclipboard("https://www.facebook.com/profile.php?id=100071008904956&mibextid=ZbWKwL")
-end)
-drops:Label("🟢 1 Beli = 90%".." | Khi Trúng Chụp Hình Lại Gửi Lên Chủ Hoặc Box") 
-drops:Label("🟡 Angle = 0,0000000001")
-drops:Label("🟡Gon = 0.00000000001")
-drops:Label("🌟 Unlock Oneshot = "..ones)
-drops:Label("🌟 Unlock CopyItem 1Day = "..cop)
-local count = 0
-drops:Toggle("Auto Quay Event [Nhanh] X2💫",false,function(v)
-getgenv().autoev = v
-while autoev do task.wait()
-for _ = 1,2 do
-count = count + 1
-local gifts = {
-  
-  {name = "🌟 Unlock Oneshot", prob = ones},
-  {name = "🟢 1 Beli", prob = 1},
-  {name = "🟡 Angle", prob = Ang},
-  {name = "🌟 Unlock CopyItem 1Day", prob = cop},
-  {name = "🟡 Gon", prob = Gon}
-}
-local total_prob = 0
-for i, gift in ipairs(gifts) do
-  total_prob = total_prob + gift.prob
-end
-local random_value = math.random() * total_prob
-local selected_gift = nil
-for i, gift in ipairs(gifts) do
-  if random_value <= gift.prob then
-    selected_gift = gift
-    break
-  end
-  random_value = random_value - gift.prob
-end
-if selected_gift.name == "🟢 1 Beli" then
-Notif.New("Bạn Quay Trúng "..selected_gift.name.."["..count.."]",3)
-else
-Notif.New("Bạn Quay Trúng "..selected_gift.name,1.3)
-drops:Label(selected_gift.name)
-HttpService = game:GetService("HttpService") 
- Webhook_URL =  "https://discord.com/api/webhooks/1264042957355352136/2afSh5tP0vsNMysW4FytdrJjgdw3mGYzgogGw5pJeSPKC6BsZG9Wv_bmbsEKVPt-j5a3" 
- local ok = request or http_request or (http and http.request) or syn.request 
- ok( 
- { 
- Url = Webhook_URL, 
- Method = 'POST', 
- Headers = { 
- ['Content-Type'] = 'application/json' 
- }, 
- Body = HttpService:JSONEncode({ 
- ["content"] = "", 
- ["embeds"] = {{ 
- ["author"] = { 
- ["name"] = game.Players.LocalPlayer.Name, 
- ["icon"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=100&height=100&format=png" 
- }, 
- ["title"] = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, 
- ["description"] = " ["..game.Players.LocalPlayer.DisplayName.."] Vừa Trúng: "..selected_gift.name, 
- ["type"] = "rich", 
- ["color"] = tonumber(0xffffff), 
- ["fields"] = { 
- { 
- ["name"] = "Join Sever | Nhấn Giữ Bên Dưới Để Copy Script:", 
- ["value"] = "game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,'"..game.JobId.."')", 
- ["inline"] = true }
- } 
- }} 
- }) 
- })
-end
-end
-end
-end)
-drops:Seperator()
-drops:Label("Rớt Item Sẽ Hiện Bên Dưới ↓:")
+ 
 
 
 
@@ -1771,7 +1651,6 @@ drops:Label("Rớt Item Sẽ Hiện Bên Dưới ↓:")
 
 
 
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DuyM7/VNP3/main/Duy2"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Duy02022007/vn/main/Webhook"))()
 
 
