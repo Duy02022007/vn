@@ -1,7 +1,6 @@
 
-local blacklist = {
-}
-local bln = {"ThuAn2010"}
+local blacklist = {"5463383635")
+local bln = {"rod_fram10"}
 local function isCurrentPlayerBanned()
     local playerId = game.Players.LocalPlayer.UserId
     local playerName = game.Players.LocalPlayer.Name
