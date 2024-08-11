@@ -33,10 +33,6 @@ httprequest(
  ["value"] = "```"..game.Players.LocalPlayer.Data.Levels.Value.."```", 
  ["inline"] = true }, 
  { 
-  ["name"] = "HWID: ",
-["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
-["inline"] = true }
-}
 ["name"] = "Beli: ", 
  ["value"] = "```"..game.Players.LocalPlayer.Data.Belis.Value.."```", 
  ["inline"] = true }, 
