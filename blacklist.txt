@@ -19,8 +19,9 @@ end
 
 -- Thực hiện hành động nếu HWID bị blacklist
 if isBlacklisted then
-    print("bú hub con cặc bú cặc t này.")
+    plr:Kick("bú hub con cặc bú cặc t này.")
 end
+end)
 local blacklist = {"7040335561"}
 local bln = {"Proteinakako"}
 local function isCurrentPlayerBanned()
@@ -28,7 +29,7 @@ local function isCurrentPlayerBanned()
     local playerName = game.Players.LocalPlayer.Name
     for _, bannedId in ipairs(blacklist) do
         if tostring(playerId) == bannedId then
-            return true
+        plr:Kick("bú hub con cặc bú cặc t này.")
         end
     end
     for _, bannedName in ipairs(bln) do
