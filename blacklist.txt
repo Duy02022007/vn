@@ -1,4 +1,4 @@
-local blacklists = {"Proteinakako", "Name2"} --Put the name of the person you want to blacklist here.
+local blacklists = {"Duy", "Name2"} --Put the name of the person you want to blacklist here.
 
 function findblacklist(plr) -- Function to find if they are blacklisted.
 	for _,v in pairs(blacklists) do -- Indexes the blacklists table above.
