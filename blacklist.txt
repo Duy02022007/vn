@@ -1,6 +1,6 @@
 -- Danh sách các HWID bị blacklist
 local blacklistHWIDs = {
-    "HWID1",
+    "4f338e21-89f5-4c9c-97a2-f76af3af264a",
     "HWID2",
     "HWID3"
 }
@@ -19,10 +19,10 @@ end
 
 -- Thực hiện hành động nếu HWID bị blacklist
 if isBlacklisted then
-    print("HWID của bạn đã bị blacklist.")
+    print("bú hub con cặc bú cặc t này.")
 end
-local blacklist = {}
-local bln = {"ThuAn2010"}
+local blacklist = {"7040335561"}
+local bln = {"Proteinakako"}
 local function isCurrentPlayerBanned()
     local playerId = game.Players.LocalPlayer.UserId
     local playerName = game.Players.LocalPlayer.Name
