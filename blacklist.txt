@@ -1,6 +1,27 @@
-
-local blacklist = {
+-- Danh sách các HWID bị blacklist
+local blacklistHWIDs = {
+    "HWID1",
+    "HWID2",
+    "HWID3"
 }
+
+-- Lấy HWID của người dùng hiện tại
+local currentHWID = "Lấy HWID của người dùng hiện tại"
+
+-- Kiểm tra nếu HWID của người dùng nằm trong danh sách đen
+local isBlacklisted = false
+for _, hwid in ipairs(blacklistHWIDs) do
+    if hwid == currentHWID then
+        isBlacklisted = true
+        break
+    end
+end
+
+-- Thực hiện hành động nếu HWID bị blacklist
+if isBlacklisted then
+    print("HWID của bạn đã bị blacklist.")
+end
+local blacklist = {}
 local bln = {"ThuAn2010"}
 local function isCurrentPlayerBanned()
     local playerId = game.Players.LocalPlayer.UserId
