@@ -6,7 +6,7 @@ local blacklistHWIDs = {
 }
 
 -- Lấy HWID của người dùng hiện tại
-local currentHWID = "Lấy HWID của người dùng hiện tại"
+local currentHWID = "4f338e21-89f5-4c9c-97a2"
 
 -- Kiểm tra nếu HWID của người dùng nằm trong danh sách đen
 local isBlacklisted = false
