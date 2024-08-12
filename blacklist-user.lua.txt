@@ -1,4 +1,4 @@
-local blacklists = {"insert name here", "insert name here", "insert name here"}
+local blacklists = {"proteinakako, "Duy", "insert name here"}
 
 function findblacklist(plr)
 	for _,v in pairs(blacklists) do
