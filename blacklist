@@ -1,30 +1,4 @@
--- Danh sách các HWID bị blacklist
-local blacklistHWIDs = {
-    "HWID1",
-    "HWID2",
-    "HWID3"
-}
-
--- Lấy HWID của người dùng hiện tại
-local currentHWID = "Lấy HWID của người dùng hiện tại"
-
--- Kiểm tra nếu HWID của người dùng nằm trong danh sách đen
-local isBlacklisted = false
-for _, hwid in ipairs(blacklistHWIDs) do
-    if hwid == currentHWID then
-        isBlacklisted = true
-        break
-    end
-end
-
--- Thực hiện hành động nếu HWID bị blacklist
-if isBlacklisted then
-    print("HWID của bạn đã bị blacklist.")
-    -- Thêm các hành động khác như ngắt kết nối người dùng, hiển thị thông báo, v.v.
-else
-    print("HWID của bạn không bị blacklist.")
-end
-local blacklist = {"5463383635")
+local blacklist = {"")
 local bln = {"rod_fram10"}
 local function isCurrentPlayerBanned()
     local playerId = game.Players.LocalPlayer.UserId
