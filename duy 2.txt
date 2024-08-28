@@ -39,10 +39,10 @@ local per = game:GetService("Players").LocalPlayer.Name
   local drops = serv:Channel("❕Farm+LocalPlayer")  
   local questlist = {}
 local quest = nil   
-for i, v in pairs(Workspace["NPC DAMAGE"]:GetChildren()) do
+for i, v in pairs(Workspace["NPCS"]:GetChildren()) do
 table.insert(questlist, v.Name)
 end
-   local drop = drops:Dropdown("Mob lv 2000 > lv 20000+", questlist, function(y)
+   local drop = drops:Dropdown("Mob lv 2000 > lv 200000+", questlist, function(y)
 for i, v in pairs(game.Workspace["NPC DAMAGE"]:GetChildren()) do
 if y == v.Name then
 quest = y
@@ -198,7 +198,7 @@ end)
    elseif quest == "Magma Admiral" and quest ~= nil then   
    game:GetService("Workspace")["NPCS"]["Quest3].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
    elseif quest == "String Admiral" and quest ~= nil then   
-   game:GetService("Workspace")["Marine Island [ 3000 - 5000 ]"]["QUEST ADMIRAL"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()   
+   game:GetService("Workspace")["NPC"]["Quest4"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()   
    elseif quest == "NickBeo" and quest ~= nil then   
    game:GetService("Workspace")["NickBeo Island [ 7000 + ]"]["Quest NickBeo"].Quest.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()   
    elseif quest == "Tango" and quest ~= nil then   
