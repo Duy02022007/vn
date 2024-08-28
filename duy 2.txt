@@ -39,7 +39,7 @@ local per = game:GetService("Players").LocalPlayer.Name
   local drops = serv:Channel("❕Farm+LocalPlayer")  
   local questlist = {}
 local quest = nil   
-for i, v in pairs(Workspace["NPCS"]:GetChildren()) do
+for i, v in pairs(Workspace["NPC DAMAGE"]:GetChildren()) do
 table.insert(questlist, v.Name)
 end
    local drop = drops:Dropdown("Mob lv 2000 > lv 200000+", questlist, function(y)
